@@ -1,0 +1,4 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"LineString","coordinates":[[110.18698597133226,-7.5682135993996935],[110.18701893302409,-7.568285095311118]]},"properties":{"OBJECTID":4,"KETERANGAN":"Jembatan","SHAPE_Leng":8.7009485855}},
+{"type":"Feature","geometry":{"type":"LineString","coordinates":[[110.18801838129608,-7.564903560656155],[110.18845470358147,-7.564732068265509]]},"properties":{"OBJECTID":5,"KETERANGAN":"Jembatan","SHAPE_Leng":51.7362306487}}
+]}

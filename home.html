@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda - WebGIS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="wrapper">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white" href="home.html">WebGIS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active" href="index.html">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="tentang.html">Tentang</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 text-center">
+            <h1 class="hero-title">Selamat Datang di WebGIS</h1>
+            <p class="hero-subtitle">
+              Jelajahi data spasial dengan mudah melalui aplikasi WebGIS interaktif yang menampilkan informasi geografis dalam bentuk titik, garis, dan poligon.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="index.html" class="btn btn-light btn-lg px-4">
+                <i class="bi bi-map me-2"></i>Lihat Peta
+              </a>
+              <a href="tentang.html" class="btn btn-outline-light btn-lg px-4">
+                <i class="bi bi-info-circle me-2"></i>Pelajari Lebih Lanjut
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jenis Data Spasial Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold text-primary mb-3">Jenis Data Spasial</h2>
+            <p class="lead text-muted">Beragam tipe data geografis yang dapat divisualisasikan</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Data Titik</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="bi bi-building me-2 text-primary"></i>Industri</li>
+                  <li class="list-group-item"><i class="bi bi-moon-stars me-2 text-primary"></i>Masjid</li>
+                  <li class="list-group-item"><i class="bi bi-flower1 me-2 text-primary"></i>Pemakaman</li>
+                  <li class="list-group-item"><i class="bi bi-star me-2 text-primary"></i>Tempat Menarik</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="bi bi-bezier me-2"></i>Data Garis</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="bi bi-signpost me-2 text-success"></i>Jaringan Jalan</li>
+                  <li class="list-group-item"><i class="bi bi-bridge me-2 text-success"></i>Jembatan</li>
+                  <li class="list-group-item"><i class="bi bi-water me-2 text-success"></i>Sungai</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-warning text-white">
+                <h5 class="mb-0"><i class="bi bi-pentagon me-2"></i>Data Poligon</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="bi bi-water me-2 text-warning"></i>Teluk</li>
+                  <li class="list-group-item"><i class="bi bi-map me-2 text-warning"></i>Penggunaan Lahan</li>
+                  <li class="list-group-item"><i class="bi bi-droplet me-2 text-warning"></i>Sungai Area</li>
+                  <li class="list-group-item"><i class="bi bi-house me-2 text-warning"></i>Bangunan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5 pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5><i class="bi bi-geo-alt-fill me-2"></i>WebGIS</h5>
+          <p class="text-muted">Aplikasi WebGIS modern untuk visualisasi dan analisis data spasial.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5>Navigasi</h5>
+          <ul class="list-unstyled">
+            <li><a href="home.html" class="footer-link">Home</a></li>
+            <li><a href="index.html" class="footer-link">Map</a></li>
+            <li><a href="tentang.html" class="footer-link">Tentang</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <h5>Kontak</h5>
+          <p class="text-muted mb-1"><i class="bi bi-envelope me-2"></i>info@webgis.com</p>
+          <p class="text-muted mb-1"><i class="bi bi-phone me-2"></i>+62 123 456 789</p>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="text-muted mb-0">&copy; 2025 WebGIS Project. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
