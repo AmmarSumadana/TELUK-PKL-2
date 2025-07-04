@@ -197,3 +197,16 @@ function updateLayerOrder() {
 }
 
 init();
+// Toggle Legend
+const legend = document.getElementById("legend");
+const toggleBtn = document.getElementById("toggle-legend");
+
+toggleBtn.addEventListener("click", () => {
+  const isHidden = legend.classList.toggle("hidden");
+  toggleBtn.classList.toggle("hidden-left", isHidden);
+  toggleBtn.innerHTML = isHidden ? "⮞" : "⮜";
+
+  // Perbarui posisi peta dan tombol
+  document.getElementById("map").style.left = isHidden ? "0" : "300px";
+  toggleBtn.style.left = isHidden ? "10px" : "305px";
+});

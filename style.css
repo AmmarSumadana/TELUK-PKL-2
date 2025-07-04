@@ -1,226 +1,288 @@
 /* Umum */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8; /* Latar belakang lembut */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    /* Latar belakang lembut */
 }
 
 /* Wrapper untuk sticky footer */
 .wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #007bff; /* Warna biru */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    background-color: #007bff;
+    /* Warna biru */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan */
 }
 
 .navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .navbar-nav .nav-link {
-  font-size: 1.1rem;
-  transition: color 0.3s;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #fff; /* Warna putih saat hover */
+    color: #fff;
+    /* Warna putih saat hover */
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #a2c2e0 0%, #6a9bd1 100%);
-  color: white;
-  padding: 80px 0;
-  margin-top: 56px;
-  border-radius: 0 0 20px 20px; /* Sudut melengkung */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan */
-  text-align: center; /* Rata tengah */
+    background: linear-gradient(135deg, #a2c2e0 0%, #6a9bd1 100%);
+    color: white;
+    padding: 80px 0;
+    margin-top: 56px;
+    border-radius: 0 0 20px 20px;
+    /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Bayangan */
+    text-align: center;
+    /* Rata tengah */
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 /* Tombol */
 .btn {
-  border-radius: 25px; /* Sudut melengkung */
-  padding: 10px 20px;
-  font-size: 1rem;
+    border-radius: 25px;
+    /* Sudut melengkung */
+    padding: 10px 20px;
+    font-size: 1rem;
 }
 
 .btn-light {
-  background-color: #ffffff;
-  color: #007bff;
-  border: 1px solid #007bff;
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
 }
 
 .btn-light:hover {
-  background-color: #007bff;
-  color: #ffffff;
+    background-color: #007bff;
+    color: #ffffff;
 }
 
 /* Jenis Data Spasial Section */
 .card {
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s; /* Transisi */
-  background-color: #ffffff; /* Warna latar belakang kartu */
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Transisi */
+    background-color: #ffffff;
+    /* Warna latar belakang kartu */
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Efek hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan saat hover */
+    transform: translateY(-5px);
+    /* Efek hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* Bayangan saat hover */
 }
 
 .card-header {
-  font-weight: bold;
-  background-color: #007bff; /* Warna biru untuk header */
-  color: white;
+    font-weight: bold;
+    background-color: #007bff;
+    /* Warna biru untuk header */
+    color: white;
 }
 
 /* Peta */
 #map {
-  position: absolute;
-  top: 56px; /* offset navbar */
-  left: 300px;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+    position: absolute;
+    top: 56px;
+    /* offset navbar */
+    left: 300px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 /* Legenda */
 #legend {
-  position: absolute;
-  top: 56px;
-  left: 0;
-  height: calc(100vh - 56px);
-  width: 300px;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 1000;
-  overflow-y: auto;
-  padding: 1rem;
-  border-right: 1px solid #ccc;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
-  border-radius: 0 20px 20px 0; /* Sudut melengkung */
+    position: absolute;
+    top: 56px;
+    left: 0;
+    height: calc(100vh - 56px);
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
+    border-radius: 0 20px 20px 0;
+    /* Sudut melengkung */
 }
 
 #legend h6 {
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  color: #007bff; /* Warna biru untuk judul legenda */
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #007bff;
+    /* Warna biru untuk judul legenda */
 }
 
 .legend-group {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #f8f9fa; /* Warna latar belakang grup legenda */
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    /* Warna latar belakang grup legenda */
 }
 
 .legend-group-title {
-  cursor: move;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  background-color: #e9ecef; /* Warna latar belakang grup */
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+    cursor: move;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    background-color: #e9ecef;
+    /* Warna latar belakang grup */
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
 }
 
 .legend-entry {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  gap: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 6px;
 }
 
 .legend-entry input[type="color"] {
-  border: none;
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  cursor: pointer;
+    border: none;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    cursor: pointer;
 }
 
 .legend-entry input[type="checkbox"] {
-  cursor: pointer;
-  width: 16px;
-  height: 16px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
 }
 
 .legend-entry span {
-  flex: 1;
-  font-size: 0.85rem;
+    flex: 1;
+    font-size: 0.85rem;
 }
 
 /* Kontrol Zoom Leaflet */
 .leaflet-control-zoom {
-  position: absolute !important;
-  right: 10px !important;
-  left: auto !important;
-  top: 66px !important;
-  z-index: 1100;
+    position: absolute !important;
+    right: 10px !important;
+    left: auto !important;
+    top: 66px !important;
+    z-index: 1100;
 }
 
 /* Scroll halaman non-peta */
 main {
-  padding-top: 80px; /* untuk jarak dari navbar */
-  padding-bottom: 40px;
+    padding-top: 80px;
+    /* untuk jarak dari navbar */
+    padding-bottom: 40px;
 }
 
 /* Footer */
 footer {
-  background: #2c3e50;
-  color: white;
-  padding: 40px 0 20px;
-  margin-top: auto;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: auto;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .footer-section h5 {
-  color: #3498db;
-  margin-bottom: 1rem;
+    color: #3498db;
+    margin-bottom: 1rem;
 }
 
 .footer-link {
-  color: #bdc3c7;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  display: block;
-  padding: 0.25rem 0;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
 }
 
 .footer-link:hover {
-  color: #3498db;
+    color: #3498db;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
+    .hero-title {
+        font-size: 2.5rem;
+    }
 
-  .navbar-nav .nav-link {
-    font-size: 1rem; /* Ukuran font lebih kecil di perangkat kecil */
-  }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        /* Ukuran font lebih kecil di perangkat kecil */
+    }
+
+    /* Tombol Toggle Legenda */
+    #toggle-legend {
+        position: absolute;
+        top: 70px;
+        left: 305px;
+        z-index: 1100;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px 0 0 5px;
+        transition: all 0.3s ease;
+        background-color: #007bff;
+        color: white;
+        border: none;
+    }
+
+    /* Saat legenda disembunyikan */
+    #legend.hidden {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Saat tombol harus bergeser ke kiri */
+    #toggle-legend.hidden-left {
+        left: 10px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+        #map {
+            left: 0 !important;
+            /* agar peta full jika legenda ditutup */
+        }
+
+        #toggle-legend {
+            top: 60px;
+            font-size: 0.8rem;
+        }
+    }
+
 }
