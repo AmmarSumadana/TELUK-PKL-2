@@ -1,288 +1,201 @@
-/* Umum */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    /* Latar belakang lembut */
+/* ======================================================= */
+/*    STYLE.CSS - DEFINITIVE SOFT BLUE ASTRO THEME (FINAL)   */
+/* ======================================================= */
+
+/* --- Keyframe Animations --- */
+@keyframes fadeIn-on-scroll {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Wrapper untuk sticky footer */
-.wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px -5px var(--glow-color); }
+    50%      { box-shadow: 0 0 30px 0px var(--glow-color); }
 }
 
-/* Navbar */
+@keyframes flow-wave { /* Homepage hero animation */
+    0%   { transform: translateX(0) rotate(0deg); }
+    100% { transform: translateX(-1000px) rotate(10deg); }
+}
+
+/* --- NEW "SOFT BLUE" Root Variables & Global Setup --- */
+:root {
+    --bg-main: #f8faff;              /* Light Cloud Blue */
+    --bg-panel: #ffffff;
+    --bg-panel-glass: rgba(255, 255, 255, 0.7); /* Frosted Glass */
+    --accent-blue: #4a90e2;          /* Primary Soft Blue */
+    --accent-blue-darker: #3a75c4;
+    --text-dark: #1d3557;             /* High Contrast Navy for text */
+    --text-light: #6a737d;
+    --border-color: #e2e8f0;
+    --glow-color: rgba(74, 144, 226, 0.4);
+}
+
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0; height: 100%;
+    overflow-x: hidden;
+}
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Professional Navbar (Light Frosted Glass) --- */
 .navbar {
-    background-color: #007bff;
-    /* Warna biru */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Bayangan */
+    background-color: var(--bg-panel-glass) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem; z-index: 1030; position: fixed; width: 100%;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
+.navbar-brand { font-weight: 700; color: var(--accent-blue) !important; }
 .navbar-nav .nav-link {
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    color: var(--text-dark) !important; font-weight: 500; transition: color 0.2s; border-radius: 6px;
+}
+.navbar-nav .nav-link:hover { color: var(--accent-blue) !important; }
+.navbar-nav .nav-link.active {
+    color: #fff !important; background-color: var(--accent-blue);
+    box-shadow: 0 0 15px var(--glow-color);
 }
 
-.navbar-nav .nav-link:hover {
-    color: #fff;
-    /* Warna putih saat hover */
-}
-
-/* Hero Section */
+/* --- Homepage with Animated Soft Blue Wave Background --- */
 .hero-section {
-    background: linear-gradient(135deg, #a2c2e0 0%, #6a9bd1 100%);
-    color: white;
-    padding: 80px 0;
-    margin-top: 56px;
-    border-radius: 0 0 20px 20px;
-    /* Sudut melengkung */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Bayangan */
-    text-align: center;
-    /* Rata tengah */
+    position: relative; overflow: hidden; display: flex; align-items: center;
+    padding: 120px 0; min-height: calc(100vh - 72px);
+    background: linear-gradient(45deg, var(--accent-blue), #87ceeb); /* Sky Blue Gradient */
+    color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.hero-section::before, .hero-section::after { /* The wave animation layers */
+    content: ''; position: absolute; left: 0; right: 0; bottom: -150px;
+    height: 400px; background: var(--bg-main); border-radius: 50%;
+    opacity: 0.8; animation: flow-wave 20s linear infinite; transform-origin: center;
 }
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+.hero-section::after {
+    bottom: -200px; opacity: 0.5; animation-duration: 25s; animation-direction: reverse;
 }
+.hero-section .container { position: relative; z-index: 2; animation: fadeIn-on-scroll 1s ease-out; animation-fill-mode: forwards; }
 
-/* Tombol */
-.btn {
-    border-radius: 25px;
-    /* Sudut melengkung */
-    padding: 10px 20px;
-    font-size: 1rem;
-}
-
-.btn-light {
-    background-color: #ffffff;
-    color: #007bff;
-    border: 1px solid #007bff;
-}
-
-.btn-light:hover {
-    background-color: #007bff;
-    color: #ffffff;
-}
-
-/* Jenis Data Spasial Section */
+/* --- General Content Styling & Advanced Card Hovers --- */
+.wrapper { display: flex; flex-direction: column; min-height: 100vh; }
+.content, .content-wrapper { flex: 1; padding-top: 72px; }
+.bg-light { background-color: var(--bg-main) !important; }
 .card {
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* Transisi */
-    background-color: #ffffff;
-    /* Warna latar belakang kartu */
+    background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%;
 }
-
 .card:hover {
-    transform: translateY(-5px);
-    /* Efek hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    /* Bayangan saat hover */
+    transform: translateY(-8px); box-shadow: 0 10px 30px var(--glow-color);
+}
+.card-header, .list-group-item { background: transparent; border-color: var(--border-color) !important; }
+.card-title, .text-primary { color: var(--text-dark) !important; }
+.text-muted { color: var(--text-light) !important; }
+.icon-circle .fas { color: #fff; }
+
+.tentang-img {
+    border-radius: 12px; transition: all 0.3s ease;
+}
+.tentang-img:hover {
+    box-shadow: 0 0 30px var(--glow-color);
+    transform: scale(1.03);
 }
 
-.card-header {
-    font-weight: bold;
-    background-color: #007bff;
-    /* Warna biru untuk header */
-    color: white;
-}
-
-/* Peta */
+/* --- Map Legend with Soft Blue "Luminous" Style --- */
 #map {
-    position: absolute;
-    top: 56px;
-    /* offset navbar */
-    left: 300px;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    position: fixed; top: 73px; left: 320px; right: 0; bottom: 0; z-index: 1;
+    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-/* Legenda */
+/* Map Legend Panel */
 #legend {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    height: calc(100vh - 56px);
-    width: 300px;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-    overflow-y: auto;
-    padding: 1rem;
-    border-right: 1px solid #ccc;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
-    border-radius: 0 20px 20px 0;
-    /* Sudut melengkung */
+    position: fixed; top: 73px; left: 0; width: 320px; height: calc(100vh - 73px);
+    background-color: var(--bg-panel-glass);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-right: 1px solid var(--border-color); z-index: 1000;
+    padding: 1.5rem; overflow-y: auto;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-#legend h6 {
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    color: #007bff;
-    /* Warna biru untuk judul legenda */
-}
+#legend.hidden { transform: translateX(-100%); }
+#legend h6 { font-weight: 600; color: var(--text-dark); }
 
 .legend-group {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f8f9fa;
-    /* Warna latar belakang grup legenda */
+    background: rgba(255, 255, 255, 0.5); border: 1px solid var(--border-color);
+    border-radius: 8px; padding: 1rem; margin-bottom: 1rem; transition: box-shadow 0.3s;
 }
-
-.legend-group-title {
-    cursor: move;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    background-color: #e9ecef;
-    /* Warna latar belakang grup */
-    padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-}
-
+.legend-group-title { cursor: grab; font-weight: bold; color: var(--text-light); }
 .legend-entry {
-    display: flex;
-    align-items: center;
-    margin-bottom: 6px;
-    gap: 6px;
+    display: flex; align-items: center; gap: 12px; padding: 4px 0;
 }
-
-.legend-entry input[type="color"] {
-    border: none;
-    width: 28px;
-    height: 28px;
-    padding: 0;
-    cursor: pointer;
+.legend-entry input[type="checkbox"], .legend-entry input[type="color"], .teluk-outline-display {
+    flex-shrink: 0; width: 22px; height: 22px; cursor: pointer;
 }
+.legend-entry input[type="color"] { border-radius: 4px; border: 1px solid #ccc; padding:0; }
+.legend-entry span { flex-grow: 1; font-size: 0.95rem; word-break: break-word; color: var(--text-dark); }
 
-.legend-entry input[type="checkbox"] {
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
+
+/* Toggle Button for Legend (Soft Blue Style) */
+#toggle-legend {
+    position: fixed; bottom: 30px; left: 340px; z-index: 1100;
+    width: 50px; height: 50px; background: var(--accent-blue);
+    color: #fff; border: none; border-radius: 50%;
+    font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 25px 0 var(--glow-color); animation: pulse-glow 3s infinite;
 }
+#toggle-legend:hover { transform: scale(1.1); }
+#toggle-legend.hidden-left { left: 30px; transform: rotate(180deg); }
 
-.legend-entry span {
-    flex: 1;
-    font-size: 0.85rem;
+
+/* --- Polished, Soft Blue Footer --- */
+.footer {
+    background: var(--bg-panel); padding: 3rem 0 2rem; margin-top: auto;
+    border-top: 1px solid var(--border-color);
 }
-
-/* Kontrol Zoom Leaflet */
-.leaflet-control-zoom {
-    position: absolute !important;
-    right: 10px !important;
-    left: auto !important;
-    top: 66px !important;
-    z-index: 1100;
+.footer h5 {
+    color: var(--text-dark); font-weight: 600; margin-bottom: 1rem;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
 }
-
-/* Scroll halaman non-peta */
-main {
-    padding-top: 80px;
-    /* untuk jarak dari navbar */
-    padding-bottom: 40px;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: white;
-    padding: 40px 0 20px;
-    margin-top: auto;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.footer-section h5 {
-    color: #3498db;
-    margin-bottom: 1rem;
-}
-
+.footer p, .footer ul { color: var(--text-light); font-size: 0.95rem; }
+.footer .list-unstyled li { margin-bottom: 0.5rem; }
 .footer-link {
-    color: #bdc3c7;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
-    padding: 0.25rem 0;
+    color: var(--text-light) !important; text-decoration: none !important;
+    transition: color 0.2s, padding-left 0.2s;
 }
-
-.footer-link:hover {
-    color: #3498db;
+.footer-link:hover { color: var(--accent-blue) !important; padding-left: 5px; }
+.footer hr { border-color: var(--border-color); }
+.footer .social-icons a {
+    color: var(--text-light); font-size: 1.2rem; transition: color 0.2s, transform 0.2s;
 }
+.footer .social-icons a:hover { color: var(--accent-blue); transform: scale(1.2); }
 
-/* Responsive */
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
+    #map { top: 67px; left: 0 !important; }
+    #legend { top: 67px; width: 100%; max-height: calc(100% - 150px); transform: translateY(-110%); }
+    #legend.hidden-mobile-show { transform: translateY(0); }
 
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1rem;
-        /* Ukuran font lebih kecil di perangkat kecil */
-    }
-
-    /* Tombol Toggle Legenda */
     #toggle-legend {
-        position: absolute;
-        top: 70px;
-        left: 305px;
-        z-index: 1100;
-        padding: 6px 10px;
-        font-size: 0.9rem;
-        border-radius: 5px 0 0 5px;
-        transition: all 0.3s ease;
-        background-color: #007bff;
-        color: white;
-        border: none;
+        width: auto; padding: 10px 20px; font-size: 1rem;
+        height: auto; border-radius: 50px; left: 50%;
+        transform: translateX(-50%); bottom: 20px;
     }
+    #toggle-legend.hidden-left { left: 50%; transform: translateX(-50%); }
+    #toggle-legend:hover { transform: scale(1.05) translateX(-50%); }
 
-    /* Saat legenda disembunyikan */
-    #legend.hidden {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    /* Saat tombol harus bergeser ke kiri */
-    #toggle-legend.hidden-left {
-        left: 10px;
-        border-radius: 0 5px 5px 0;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-        #map {
-            left: 0 !important;
-            /* agar peta full jika legenda ditutup */
-        }
-
-        #toggle-legend {
-            top: 60px;
-            font-size: 0.8rem;
-        }
-    }
-
+    .footer { text-align: center; }
 }

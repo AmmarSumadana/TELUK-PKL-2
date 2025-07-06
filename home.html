@@ -1,160 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beranda - WebGIS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Beranda - WebGIS Dusun Teluk</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body class="wrapper">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold text-white" href="home.html">WebGIS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white active" href="index.html">Map</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="tentang.html">Tentang</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tentang.html"><i class="fas fa-info-circle me-1"></i> Tentang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper p-0">
+        <!-- THE ONLY CHANGE IS HERE: The style="..." attribute has been removed. -->
+        <section class="hero-section text-white text-center">
+            <div class="container">
+                <h1 class="hero-title mb-4">Jelajahi Dusun Teluk dalam Peta Interaktif</h1>
+                <p class="hero-subtitle mb-5">
+                    Aplikasi WebGIS ini menyajikan informasi geografis Dusun Teluk, Desa Sumberarum, Kecamatan Tempuran, Kabupaten Magelang, Jawa Tengah. Temukan data titik, garis, dan poligon dengan mudah.
+                </p>
+                <div class="d-flex justify-content-center gap-3 animate-fade-in-up delay-400">
+                    <a href="index.html" class="btn btn-light btn-lg px-4 shadow-sm">
+                        <i class="fas fa-map-marked-alt me-2"></i>Lihat Peta Interaktif
+                    </a>
+                    <a href="tentang.html" class="btn btn-outline-light btn-lg px-4 shadow-sm">
+                        <i class="fas fa-question-circle me-2"></i>Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-5 text-center">
+                    <div class="col-12">
+                        <h2 class="display-5 fw-bold text-primary mb-3">Fitur Unggulan</h2>
+                        <p class="lead text-muted">Aplikasi WebGIS yang intuitif dan kaya informasi</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100 text-center p-4">
+                            <div class="card-body">
+                                <div class="icon-circle mb-4 mx-auto bg-primary text-white"><i class="fas fa-layer-group fa-2x"></i></div>
+                                <h5 class="card-title fw-bold text-primary">Visualisasi Layer Lengkap</h5>
+                                <p class="card-text text-muted">Menampilkan berbagai jenis data spasial (titik, garis, poligon) dengan representasi yang jelas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100 text-center p-4">
+                            <div class="card-body">
+                                <div class="icon-circle mb-4 mx-auto bg-success text-white"><i class="fas fa-palette fa-2x"></i></div>
+                                <h5 class="card-title fw-bold text-success">Kustomisasi Tampilan</h5>
+                                <p class="card-text text-muted">Ubah warna layer dan atur urutan tampilan sesuai kebutuhan Anda untuk analisis yang lebih baik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100 text-center p-4">
+                            <div class="card-body">
+                                <div class="icon-circle mb-4 mx-auto bg-warning text-white"><i class="fas fa-search-location fa-2x"></i></div>
+                                <h5 class="card-title fw-bold text-warning">Akses Data Cepat</h5>
+                                <p class="card-text text-muted">Akses informasi detail setiap fitur geografis dengan pop-up interaktif.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row mb-5 text-center">
+                    <div class="col-12">
+                        <h2 class="display-5 fw-bold text-primary mb-3">Jenis Data Spasial</h2>
+                        <p class="lead text-muted">Beragam tipe data geografis yang dapat divisualisasikan</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-primary text-white d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt me-2"></i><h5 class="mb-0">Data Titik</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-industry me-2 text-primary"></i>Industri</li>
+                                    <li class="list-group-item"><i class="fas fa-mosque me-2 text-primary"></i>Masjid</li>
+                                    <li class="list-group-item"><i class="fas fa-cross me-2 text-primary"></i>Pemakaman</li>
+                                    <li class="list-group-item"><i class="fas fa-star me-2 text-primary"></i>Tempat Menarik</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-success text-white d-flex align-items-center">
+                                <i class="fas fa-road me-2"></i><h5 class="mb-0">Data Garis</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-route me-2 text-success"></i>Jaringan Jalan</li>
+                                    <li class="list-group-item"><i class="fas fa-bridge me-2 text-success"></i>Jembatan</li>
+                                    <li class="list-group-item"><i class="fas fa-water me-2 text-success"></i>Sungai</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-warning text-white d-flex align-items-center">
+                                <i class="fas fa-draw-polygon me-2"></i><h5 class="mb-0">Data Poligon</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-water me-2 text-warning"></i>Teluk</li>
+                                    <li class="list-group-item"><i class="fas fa-tree-city me-2 text-warning"></i>Penggunaan Lahan</li>
+                                    <li class="list-group-item"><i class="fas fa-water me-2 text-warning"></i>Sungai Area</li>
+                                    <li class="list-group-item"><i class="fas fa-house me-2 text-warning"></i>Bangunan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </nav>
 
-  <!-- Content -->
-  <div class="content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12 text-center">
-            <h1 class="hero-title">Selamat Datang di WebGIS</h1>
-            <p class="hero-subtitle">
-              Jelajahi data spasial dengan mudah melalui aplikasi WebGIS interaktif yang menampilkan informasi geografis dalam bentuk titik, garis, dan poligon.
-            </p>
-            <div class="d-flex justify-content-center gap-3">
-              <a href="index.html" class="btn btn-light btn-lg px-4">
-                <i class="bi bi-map me-2"></i>Lihat Peta
-              </a>
-              <a href="tentang.html" class="btn btn-outline-light btn-lg px-4">
-                <i class="bi bi-info-circle me-2"></i>Pelajari Lebih Lanjut
-              </a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</h5>
+                    <p>Platform WebGIS modern untuk visualisasi dan analisis data spasial Dusun Teluk.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="footer-link"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="index.html" class="footer-link"><i class="fas fa-map me-2"></i>Peta</a></li>
+                        <li class="mb-2"><a href="tentang.html" class="footer-link"><i class="fas fa-info-circle me-2"></i>Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@webgis-teluk.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+62 812 3456 7890</li>
+                        <li class="mb-2"><i class="fas fa-map-pin me-2"></i>Dusun Teluk, Magelang</li>
+                    </ul>
+                </div>
+                 <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Ikuti Kami</h5>
+                    <div class="social-icons">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <hr class="my-3">
+            <div class="row text-center text-md-start">
+                <div class="col-12">
+                    <p class="mb-0">© 2025 WebGIS Project. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- Jenis Data Spasial Section -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="display-5 fw-bold text-primary mb-3">Jenis Data Spasial</h2>
-            <p class="lead text-muted">Beragam tipe data geografis yang dapat divisualisasikan</p>
-          </div>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="card border-0 shadow-sm">
-              <div class="card-header bg-primary text-white">
-                <h5 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Data Titik</h5>
-              </div>
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="bi bi-building me-2 text-primary"></i>Industri</li>
-                  <li class="list-group-item"><i class="bi bi-moon-stars me-2 text-primary"></i>Masjid</li>
-                  <li class="list-group-item"><i class="bi bi-flower1 me-2 text-primary"></i>Pemakaman</li>
-                  <li class="list-group-item"><i class="bi bi-star me-2 text-primary"></i>Tempat Menarik</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4">
-            <div class="card border-0 shadow-sm">
-              <div class="card-header bg-success text-white">
-                <h5 class="mb-0"><i class="bi bi-bezier me-2"></i>Data Garis</h5>
-              </div>
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="bi bi-signpost me-2 text-success"></i>Jaringan Jalan</li>
-                  <li class="list-group-item"><i class="bi bi-bridge me-2 text-success"></i>Jembatan</li>
-                  <li class="list-group-item"><i class="bi bi-water me-2 text-success"></i>Sungai</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4">
-            <div class="card border-0 shadow-sm">
-              <div class="card-header bg-warning text-white">
-                <h5 class="mb-0"><i class="bi bi-pentagon me-2"></i>Data Poligon</h5>
-              </div>
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="bi bi-water me-2 text-warning"></i>Teluk</li>
-                  <li class="list-group-item"><i class="bi bi-map me-2 text-warning"></i>Penggunaan Lahan</li>
-                  <li class="list-group-item"><i class="bi bi-droplet me-2 text-warning"></i>Sungai Area</li>
-                  <li class="list-group-item"><i class="bi bi-house me-2 text-warning"></i>Bangunan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer class="mt-5 pt-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 mb-4">
-          <h5><i class="bi bi-geo-alt-fill me-2"></i>WebGIS</h5>
-          <p class="text-muted">Aplikasi WebGIS modern untuk visualisasi dan analisis data spasial.</p>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <h5>Navigasi</h5>
-          <ul class="list-unstyled">
-            <li><a href="home.html" class="footer-link">Home</a></li>
-            <li><a href="index.html" class="footer-link">Map</a></li>
-            <li><a href="tentang.html" class="footer-link">Tentang</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <h5>Kontak</h5>
-          <p class="text-muted mb-1"><i class="bi bi-envelope me-2"></i>info@webgis.com</p>
-          <p class="text-muted mb-1"><i class="bi bi-phone me-2"></i>+62 123 456 789</p>
-        </div>
-      </div>
-      <hr class="my-4">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <p class="text-muted mb-0">&copy; 2025 WebGIS Project. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const sections = document.querySelectorAll('.fade-in-on-scroll');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html>
