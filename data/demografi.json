@@ -1,0 +1,26 @@
+{
+  "ringkasan": {
+    "total_penduduk": 458,
+    "jumlah_kk": 152,
+    "laki_laki": 235,
+    "perempuan": 223
+  },
+  "piramida": [
+    { "kelompok_usia": "0-9 Thn", "laki_laki": 32, "perempuan": 29 },
+    { "kelompok_usia": "10-19 Thn", "laki_laki": 41, "perempuan": 38 },
+    { "kelompok_usia": "20-29 Thn", "laki_laki": 45, "perempuan": 48 },
+    { "kelompok_usia": "30-39 Thn", "laki_laki": 40, "perempuan": 39 },
+    { "kelompok_usia": "40-49 Thn", "laki_laki": 35, "perempuan": 32 },
+    { "kelompok_usia": "50-59 Thn", "laki_laki": 28, "perempuan": 25 },
+    { "kelompok_usia": "60+ Thn", "laki_laki": 14, "perempuan": 12 }
+  ],
+  "pendidikan": {
+    "Belum/Tidak Sekolah": 25,
+    "SD / Sederajat": 160,
+    "SMP / Sederajat": 125,
+    "SMA / Sederajat": 108,
+    "Diploma / Sarjana": 40
+  },
+  "sejarah": "Dusun Teluk merupakan salah satu dusun tua di Desa Sumberarum yang namanya diambil dari bentuk geografisnya yang menyerupai teluk atau lekukan daratan yang dikelilingi oleh aliran sungai. Sejak dahulu, masyarakatnya dikenal guyub dan mayoritas bekerja sebagai petani. Pembangunan signifikan mulai terasa pada era 80-an dengan adanya pengerasan jalan utama yang membuka akses ekonomi bagi warga.",
+  "pemerintahan_img": "image/struktur-organisasi.png"
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tur Virtual - WebGIS Dusun Teluk</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="wrapper p-0">
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="statistik.html"><i class="fas fa-chart-pie me-1"></i>
+                            Statistik</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html"><i class="fas fa-images me-1"></i>
+                            Galeri & Berita</a></li>
+                    <li class="nav-item"><a class="nav-link" href="potensi.html"><i class="fas fa-star me-1"></i>
+                            Potensi Dusun</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="tur-virtual.html"><i
+                                class="fas fa-route me-1"></i> Tur Virtual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html"><i class="fas fa-info-circle me-1"></i>
+                            Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="tour-layout">
+        <!-- Kolom Kiri: Panel Cerita -->
+        <aside id="story-panel">
+            <div id="story-header">
+                <h2 class="fw-bold text-primary mb-1">Pengalaman di Dusun Teluk</h2>
+                <p class="text-muted mb-0">Baca cerita kami dan klik tombol untuk melihat lokasinya di peta.</p>
+            </div>
+            <div id="story-chapters-container">
+                <!-- Bab-bab cerita akan di-render di sini oleh JavaScript -->
+                <div class="text-center p-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Kolom Kanan: Peta -->
+        <div id="map-panel">
+            <div id="tour-map"></div>
+        </div>
+    </main>
+
+    <!-- Memuat Bootstrap JS Bundle yang diperlukan untuk Popover -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="tur-virtual.js"></script>
+</body>
+
+</html>

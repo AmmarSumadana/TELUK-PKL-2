@@ -1,0 +1,37 @@
+[
+  {
+    "id": "bab-1",
+    "judul": "Pagi di Gerbang Dusun",
+    "gambar": "images/dusun-teluk.jpg",
+    "cerita": "Perjalanan kita dimulai di gerbang selamat datang Dusun Teluk. Udara pagi yang sejuk menyambut, diiringi pemandangan hijau persawahan yang membentang luas. Dari sini, kita bisa melihat denyut kehidupan dusun yang mulai menggeliat. Ini adalah titik awal yang sempurna untuk memahami keindahan dan ketenangan yang ditawarkan oleh dusun ini.",
+    "koordinat": [-7.551083, 110.198472]
+  },
+  {
+    "id": "bab-2",
+    "judul": "Jantung Kehidupan: Masjid Al-Hidayah",
+    "gambar": "images/dusun-teluk.jpg",
+    "cerita": "Melangkah lebih dalam, kita akan menemukan Masjid Al-Hidayah, pusat kegiatan spiritual dan sosial warga. Bangunan megah dengan arsitektur yang menenangkan ini tidak hanya menjadi tempat ibadah, tetapi juga tempat warga berkumpul, belajar, dan mempererat tali silaturahmi. Suara adzan yang berkumandang dari menaranya menjadi penanda waktu dan panggilan kedamaian bagi seluruh dusun.",
+    "koordinat": [-7.553510, 110.197935]
+  },
+  {
+    "id": "bab-3",
+    "judul": "Sumber Ekonomi: Persawahan Terasering",
+    "gambar": "images/dusun-teluk.jpg",
+    "cerita": "Dusun Teluk diberkahi dengan lahan pertanian yang subur. Di sini, kita akan melihat hamparan sawah terasering yang dikelola secara turun-temurun. Padi adalah komoditas utama yang menopang ekonomi warga. Sistem irigasi yang teratur dan kerja keras para petani menghasilkan panen berkualitas yang menjadi kebanggaan dusun.",
+    "koordinat": [-7.554583, 110.195321]
+  },
+  {
+    "id": "bab-4",
+    "judul": "Denyut Nadi Komunitas: Balai Dusun",
+    "gambar": "images/dusun-teluk.jpg",
+    "cerita": "Tak jauh dari pusat permukiman, berdirilah Balai Dusun. Ini adalah pusat administrasi dan tempat musyawarah warga. Segala keputusan penting terkait kemajuan dusun dibahas di sini. Balai dusun menjadi simbol gotong royong dan demokrasi yang hidup di tengah masyarakat.",
+    "koordinat": [-7.552800, 110.199100]
+  },
+  {
+    "id": "bab-5",
+    "judul": "Senja di Tepi Sungai",
+    "gambar": "images/dusun-teluk.jpg",
+    "cerita": "Kita akan mengakhiri tur virtual ini di tepi sungai yang membelah dusun. Saat senja tiba, langit akan diwarnai gradasi oranye yang memukau, memantul di permukaan air yang tenang. Suasana ini memberikan refleksi sempurna tentang kehidupan di Dusun Teluk: sederhana, damai, dan sangat dekat dengan alam. Ini adalah kenangan yang akan selalu membekas di hati.",
+    "koordinat": [-7.556050, 110.200550]
+  }
+]

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri & Berita - WebGIS Dusun Teluk</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item text-white">
+                        <a class="nav-link" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="statistik.html"><i class="fas fa-chart-pie me-1"></i>
+                            Statistik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="galeri.html"><i
+                                class="fas fa-images me-1"></i> Galeri & Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="potensi.html"><i
+                                class="fas fa-star me-1"></i> Potensi Dusun</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tur-virtual.html"><i class="fas fa-route me-1"></i> Tur
+                            Virtual</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tentang.html"><i class="fas fa-info-circle me-1"></i>
+                            Tentang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper" id="gallery-page">
+        <div class="container py-5">
+            <!-- Header Section -->
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3">Galeri & Berita</h1>
+                    <p class="lead text-muted">Jendela visual dan informasi terkini dari kehidupan di Dusun Teluk.</p>
+                </div>
+            </div>
+
+            <!-- Galeri Foto Section -->
+            <section class="mb-5 pb-4">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="display-6 fw-bold text-primary">Galeri Foto</h2>
+                        <!-- Filter Controls -->
+                        <div id="gallery-controls" class="btn-group mt-3 shadow-sm" role="group"
+                            aria-label="Filter Galeri">
+                            <button type="button" class="btn btn-outline-primary active"
+                                data-filter="all">Semua</button>
+                            <button type="button" class="btn btn-outline-primary"
+                                data-filter="pemandangan">Pemandangan</button>
+                            <button type="button" class="btn btn-outline-primary" data-filter="kegiatan">Kegiatan
+                                Warga</button>
+                            <button type="button" class="btn btn-outline-primary"
+                                data-filter="infrastruktur">Infrastruktur</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Grid (Strukturnya siap untuk lazy loading) -->
+                <div id="gallery-grid" class="row g-4">
+                    <!-- Gallery items akan di-render di sini oleh JavaScript -->
+                </div>
+            </section>
+
+            <!-- Berita & Pengumuman Section -->
+            <section>
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="display-6 fw-bold text-primary">Berita & Pengumuman</h2>
+                    </div>
+                </div>
+                <div id="news-list" class="row g-4">
+                    <!-- News items akan di-render di sini oleh JavaScript -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap Modal for Image Preview -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Detail Gambar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modal-img" class="img-fluid modal-img" alt="Gambar Diperbesar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</h5>
+                    <p>Platform WebGIS modern untuk visualisasi dan analisis data spasial Dusun Teluk.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="home.html" class="footer-link"><i
+                                    class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="mb-2"><a href="index.html" class="footer-link"><i
+                                    class="fas fa-map me-2"></i>Peta</a></li>
+                        <li class="mb-2"><a href="statistik.html" class="footer-link"><i
+                                    class="fas fa-chart-pie me-2"></i>Statistik</a></li>
+                        <li class="mb-2"><a href="galeri.html" class="footer-link"><i
+                                    class="fas fa-images me-2"></i>Galeri & Berita</a></li>
+                        <li class="mb-2"><a href="tentang.html" class="footer-link"><i
+                                    class="fas fa-info-circle me-2"></i>Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@webgis-teluk.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+62 812 3456 7890</li>
+                        <li class="mb-2"><i class="fas fa-map-pin me-2"></i>Dusun Teluk, Magelang</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3">Ikuti Kami</h5>
+                    <div class="social-icons">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row text-center text-md-start">
+                <div class="col-12">
+                    <p class="mb-0">© 2025 WebGIS Project. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="galeri.js"></script>
+</body>
+
+</html>

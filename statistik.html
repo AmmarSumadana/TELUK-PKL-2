@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data & Statistik - WebGIS Dusun Teluk</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="statistik.html"><i
+                                class="fas fa-chart-pie me-1"></i> Statistik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html"><i class="fas fa-images me-1"></i> Galeri &
+                            Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="potensi.html"><i class="fas fa-star me-1"></i> Potensi Dusun</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tur-virtual.html"><i class="fas fa-route me-1"></i> Tur
+                            Virtual</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html"><i class="fas fa-info-circle me-1"></i> Tentang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper" id="statistik-page">
+        <div class="container py-5">
+            <!-- ================= BAGIAN 1: STATISTIK SPASIAL ================= -->
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3">Statistik Spasial</h1>
+                    <p class="lead text-muted">Ringkasan kuantitatif dari data geografis Dusun Teluk.</p>
+                </div>
+            </div>
+
+            <!-- Tabel Data Spasial -->
+            <div class="row mb-5 g-5">
+                <div class="col-lg-12">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-warning text-white d-flex align-items-center">
+                            <i class="fas fa-draw-polygon me-2"></i>
+                            <h5 class="mb-0">Data Poligon (Penggunaan Lahan)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-header-sortable" id="header-poligon">
+                                        <tr>
+                                            <th data-sort="kategori">Kategori <span class="sort-icon"></span></th>
+                                            <th data-sort="luas">Total Luas (Hektar) <span class="sort-icon"></span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stats-poligon"></tbody>
+                                </table>
+                            </div>
+                            <nav id="pagination-poligon" class="d-flex justify-content-end"></nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-success text-white d-flex align-items-center">
+                            <i class="fas fa-road me-2"></i>
+                            <h5 class="mb-0">Data Garis (Jaringan)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-header-sortable" id="header-garis">
+                                        <tr>
+                                            <th data-sort="kategori">Kategori <span class="sort-icon"></span></th>
+                                            <th data-sort="panjang">Total Panjang (km) <span class="sort-icon"></span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stats-garis"></tbody>
+                                </table>
+                            </div>
+                            <nav id="pagination-garis" class="d-flex justify-content-end"></nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <h5 class="mb-0">Data Titik (Fasilitas)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-header-sortable" id="header-titik">
+                                        <tr>
+                                            <th data-sort="kategori">Kategori <span class="sort-icon"></span></th>
+                                            <th data-sort="jumlah">Jumlah <span class="sort-icon"></span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="stats-titik"></tbody>
+                                </table>
+                            </div>
+                            <nav id="pagination-titik" class="d-flex justify-content-end"></nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualisasi Grafik Spasial -->
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="display-6 fw-bold text-primary">Visualisasi Grafik Spasial</h2>
+                </div>
+                <div class="col-lg-7 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">Persentase Penggunaan Lahan</h5>
+                            <div class="chart-container"><canvas id="penggunaanLahanChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-center mb-3">Jumlah Fasilitas Umum</h5>
+                            <div class="chart-container"><canvas id="fasilitasChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5 border-2">
+
+            <!-- ================= BAGIAN 2: DATA KEPENDUDUKAN ================= -->
+            <!-- Bagian Data Kependudukan -->
+            <section>
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h2 class="display-6 fw-bold text-primary">Data Kependudukan</h2>
+                    </div>
+                </div>
+
+                <!-- Kartu Ringkasan Demografi -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card text-center h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon-circle mb-3 mx-auto bg-primary text-white"><i
+                                        class="fas fa-users fa-lg"></i></div>
+                                <h5 class="card-title fw-bold">Total Penduduk</h5>
+                                <p id="total-penduduk" class="display-5 fw-bold mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon-circle mb-3 mx-auto bg-success text-white"><i
+                                        class="fas fa-house-user fa-lg"></i></div>
+                                <h5 class="card-title fw-bold">Jumlah KK</h5>
+                                <p id="jumlah-kk" class="display-5 fw-bold mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon-circle mb-3 mx-auto bg-warning text-white"><i
+                                        class="fas fa-venus-mars fa-lg"></i></div>
+                                <h5 class="card-title fw-bold">Rasio Jenis Kelamin</h5>
+                                <p id="rasio-gender" class="display-5 fw-bold mb-0">...</p>
+                                <small class="text-muted">(Laki-laki per 100 Perempuan)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grafik Demografi -->
+                <div class="row g-4">
+                    <div class="col-lg-7 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-3">Piramida Penduduk</h5>
+                                <div class="chart-container"><canvas id="piramidaPendudukChart"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-center mb-3">Tingkat Pendidikan</h5>
+                                <div class="chart-container"><canvas id="pendidikanChart"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Salin & Tempel kode footer Anda di sini -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+    <script src="statistik.js"></script>
+</body>
+
+</html>

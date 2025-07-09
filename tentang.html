@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,29 +10,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="wrapper">
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
+                    <li class="nav-item"> <a class="nav-link" href="home.html"><i class="fas fa-home me-1"></i> Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
+                    <li class="nav-item"> <a class="nav-link" href="index.html"><i class="fas fa-map me-1"></i> Peta</a>
                     </li>
+                    <li class="nav-item"> <a class="nav-link" href="statistik.html"><i
+                                class="fas fa-chart-pie me-1"></i> Statistik</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="galeri.html"><i class="fas fa-images me-1"></i>
+                            Galeri & Berita</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="potensi.html"><i class="fas fa-star me-1"></i>
+                            Potensi Dusun</a> </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white active" aria-current="page" href="tentang.html"><i class="fas fa-info-circle me-1"></i> Tentang</a>
+                        <a class="nav-link text-white" href="tur-virtual.html"><i class="fas fa-route me-1"></i> Tur
+                            Virtual</a>
                     </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="tentang.html"><i
+                                class="fas fa-info-circle me-1"></i> Tentang</a> </li>
                 </ul>
             </div>
         </div>
@@ -39,116 +50,91 @@
 
     <main class="content-wrapper">
         <div class="container py-5">
-            <div class="row align-items-center mb-5 pb-4">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="image/dusun-teluk.jpg" alt="Foto Dusun Teluk" class="img-fluid tentang-img">
+            <!-- Bagian 1: Tentang Proyek WebGIS -->
+            <section class="mb-5 pb-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="image/dusun-teluk.jpg" alt="Foto Dusun Teluk" class="img-fluid tentang-img shadow">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-4 mb-3 fw-bold text-primary">Mengenal WebGIS Dusun Teluk</h2>
+                        <p class="text-muted lead">
+                            Platform digital untuk menyajikan informasi spasial Dusun Teluk, bagian dari Desa
+                            Sumberarum, Kecamatan Tempuran, Kabupaten Magelang.
+                        </p>
+                        <p class="text-muted">
+                            Dibangun dengan teknologi Leaflet.js, Bootstrap, dan GeoJSON, aplikasi ini dirancang agar
+                            ringan, cepat, dan mudah diakses untuk mendukung berbagai kebutuhan, mulai dari penelitian
+                            hingga perencanaan wilayah.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title display-4 mb-3">Mengenal WebGIS Dusun Teluk</h2>
-                    <p class="text-muted lead">
-                        Sebuah platform digital untuk menyajikan informasi spasial Dusun Teluk, bagian dari Desa Sumberarum, Kecamatan Tempuran, Kabupaten Magelang, Jawa Tengah.
-                    </p>
-                    <p class="text-muted">
-                        Kami berkomitmen menyediakan data geografis yang akurat dan mudah diakses untuk mendukung berbagai kebutuhan, mulai dari penelitian, perencanaan, hingga eksplorasi wilayah. Anda dapat menemukan berbagai data seperti lokasi penting (titik), jaringan jalan (garis), dan penggunaan lahan (poligon) dalam antarmuka yang interaktif.
-                    </p>
-                    <p class="text-muted">
-                        Dibangun dengan teknologi Leaflet.js, Bootstrap, dan GeoJSON, aplikasi ini dirancang agar ringan, cepat, dan mudah dikembangkan di masa depan.
-                    </p>
-                </div>
-            </div>
+            </section>
 
-            <section class="py-5 px-4 bg-white rounded-3 shadow-sm">
-                <div class="container">
-                    <div class="row mb-5 text-center">
-                        <div class="col-lg-8 mx-auto">
-                           <h2 class="section-title display-5 mb-3">Album Peta</h2>
-                           <p class="section-subtitle lead">Koleksi layout peta hasil visualisasi data spasial Dusun Teluk.</p>
+            <hr class="my-5 border-2">
+
+            <!-- Bagian 2: Profil Dusun (Sejarah & Struktur) -->
+            <section>
+                <div class="row mb-5 text-center">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="display-5 fw-bold text-primary">Profil Dusun Teluk</h2>
+                        <p class="lead text-muted">Ketahui lebih dalam tentang sejarah dan tata kelola pemerintahan
+                            dusun kami.</p>
+                    </div>
+                </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <div class="card h-100 p-4 shadow-sm">
+                            <h3 class="fw-bold text-primary">Sejarah Singkat</h3>
+                            <p id="sejarah-dusun" class="text-muted">Memuat data sejarah...</p>
+                            <h3 class="fw-bold text-primary mt-4">Struktur Pemerintahan</h3>
+                            <p class="text-muted">Bagan organisasi ini menampilkan susunan aparat pemerintahan Dusun
+                                Teluk yang bertugas melayani masyarakat.</p>
                         </div>
                     </div>
-                    <div id="mapCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#mapCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#mapCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#mapCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="image/batasdusun.jpg" class="d-block w-100" alt="Peta Administrasi">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="fw-bold">Peta Administrasi</h5>
-                                    <p>Menampilkan batas wilayah dusun.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="image/penggunaanlahan.jpg" class="d-block w-100" alt="Peta Penggunaan Lahan">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="fw-bold">Peta Penggunaan Lahan</h5>
-                                    <p>Visualisasi pemanfaatan lahan seperti pemukiman, sawah, dan industri.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="image/sarpras.jpg" class="d-block w-100" alt="Peta Infrastruktur">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5 class="fw-bold">Peta Jaringan Infrastruktur</h5>
-                                    <p>Menggambarkan jaringan jalan, jembatan, dan aliran sungai.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#mapCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#mapCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    <div class="col-lg-5">
+                        <img id="struktur-pemerintahan-img" src="image/placeholder.gif"
+                            alt="Struktur Pemerintahan Dusun Teluk" class="img-fluid rounded-3 shadow">
                     </div>
+                </div>
+            </section>
+
+            <!-- Bagian Penutup & Ajakan Bertindak -->
+            <section class="mt-5 pt-5 text-center">
+                <h3 class="fw-bold text-primary">Jelajahi Lebih Lanjut</h3>
+                <p class="text-muted lead">Anda telah mengenal kami. Sekarang, lihatlah dusun kami secara visual.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="galeri.html" class="btn btn-primary btn-lg px-4 shadow-sm">
+                        <i class="fas fa-images me-2"></i>Lihat Galeri Foto
+                    </a>
+                    <a href="index.html" class="btn btn-outline-primary btn-lg px-4 shadow-sm">
+                        <i class="fas fa-map-marked-alt me-2"></i>Buka Peta Interaktif
+                    </a>
                 </div>
             </section>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="mb-3"><i class="fas fa-globe-americas me-2"></i>WebGIS Dusun Teluk</h5>
-                    <p>Platform WebGIS modern untuk visualisasi dan analisis data spasial Dusun Teluk.</p>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="mb-3">Navigasi</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="home.html" class="footer-link"><i class="fas fa-home me-2"></i>Home</a></li>
-                        <li class="mb-2"><a href="index.html" class="footer-link"><i class="fas fa-map me-2"></i>Peta</a></li>
-                        <li class="mb-2"><a href="tentang.html" class="footer-link"><i class="fas fa-info-circle me-2"></i>Tentang</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-3">Kontak</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@webgis-teluk.com</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+62 812 3456 7890</li>
-                        <li class="mb-2"><i class="fas fa-map-pin me-2"></i>Dusun Teluk, Magelang</li>
-                    </ul>
-                </div>
-                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-3">Ikuti Kami</h5>
-                    <div class="social-icons">
-                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-3" style="border-color: #4b6a88;">
-            <div class="row text-center text-md-start">
-                <div class="col-12">
-                    <p class="mb-0">© 2025 WebGIS Project. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+        <!-- Salin kode footer dari halaman lain -->
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script sederhana untuk memuat data Sejarah & Struktur
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('data/demografi.json');
+                if (!response.ok) throw new Error(`Gagal memuat demografi.json`);
+                const data = await response.json();
+                document.getElementById('sejarah-dusun').textContent = data.sejarah;
+                document.getElementById('struktur-pemerintahan-img').src = data.pemerintahan_img;
+            } catch (error) {
+                console.error("Gagal memuat data monografi:", error);
+                document.getElementById('sejarah-dusun').textContent = 'Gagal memuat data sejarah.';
+            }
+        });
+    </script>
 </body>
+
 </html>
